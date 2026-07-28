@@ -1,5 +1,3 @@
-{-# LANGUAGE TypeOperators #-}
-
 module Nixfmt.Parser.Float (floatParse) where
 
 import Data.List (singleton)

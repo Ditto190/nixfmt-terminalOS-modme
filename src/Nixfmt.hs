@@ -1,5 +1,4 @@
 {-# LANGUAGE OverloadedLists #-}
-{-# LANGUAGE RankNTypes #-}
 
 module Nixfmt (
   errorBundlePretty,
@@ -16,11 +15,11 @@ import Data.Bifunctor (bimap, first)
 import Data.Either (fromRight)
 import Data.Text (Text, unpack)
 import Data.Text.Lazy (toStrict)
-import qualified Nixfmt.Parser as Parser
+import Nixfmt.Parser qualified as Parser
 import Nixfmt.Predoc (Pretty, fixup, pretty)
 import Nixfmt.Pretty ()
 import Nixfmt.Types (Expression, LanguageElement, ParseErrorBundle, Whole (..), walkSubprograms)
-import qualified Text.Megaparsec as Megaparsec (parse)
+import Text.Megaparsec qualified as Megaparsec (parse)
 import Text.Megaparsec.Error (errorBundlePretty)
 import Text.Pretty.Simple (pShow)
 
