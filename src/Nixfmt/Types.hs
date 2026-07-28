@@ -1,12 +1,6 @@
-{-# LANGUAGE DeriveFoldable #-}
-{-# LANGUAGE DeriveFunctor #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE LambdaCase #-}
-{-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE OverloadedLists #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE PatternSynonyms #-}
-{-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE StrictData #-}
 
 module Nixfmt.Types (
@@ -60,7 +54,7 @@ import Data.Sequence
 import Data.Text (Text)
 import Data.Void (Void)
 import Text.Megaparsec (Pos)
-import qualified Text.Megaparsec as MP (ParseErrorBundle, Parsec, pos1)
+import Text.Megaparsec qualified as MP (ParseErrorBundle, Parsec, pos1)
 import Prelude hiding (String)
 
 -- | State threaded through the parser.

@@ -1,6 +1,3 @@
-{-# LANGUAGE BangPatterns #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE StrictData #-}
 
@@ -48,9 +45,9 @@ import Data.Functor (($>), (<&>))
 import Data.Functor.Identity (runIdentity)
 import Data.List (intersperse)
 import Data.List.NonEmpty (NonEmpty (..), singleton, (<|))
-import qualified Data.List.NonEmpty as NonEmpty
+import Data.List.NonEmpty qualified as NonEmpty
 import Data.Maybe (fromMaybe)
-import qualified Data.Sequence as Seq
+import Data.Sequence qualified as Seq
 import Data.Text as Text (Text, concat, length, replicate, strip, stripStart, takeWhileEnd)
 import GHC.Stack (HasCallStack)
 import Nixfmt.Types (

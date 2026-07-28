@@ -1,7 +1,4 @@
-{-# LANGUAGE DeriveDataTypeable #-}
-{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE MultiWayIf #-}
-{-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE TemplateHaskell #-}
 
 module Main where
@@ -17,10 +14,10 @@ import Data.FileEmbed
 import Data.List (intersperse, isSuffixOf)
 import Data.Maybe (fromMaybe)
 import Data.Text (Text)
-import qualified Data.Text.IO as TextIO (getContents, hPutStr, putStr)
+import Data.Text.IO qualified as TextIO (getContents, hPutStr, putStr)
 import Data.Version (showVersion)
 import GHC.IO.Encoding (utf8)
-import qualified Nixfmt
+import Nixfmt qualified
 import Nixfmt.Predoc (layout)
 import Paths_nixfmt (version)
 import System.Console.CmdArgs (

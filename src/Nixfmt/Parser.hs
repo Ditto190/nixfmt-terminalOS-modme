@@ -1,6 +1,4 @@
-{-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE BlockArguments #-}
-{-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE OverloadedLists #-}
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -8,7 +6,7 @@ module Nixfmt.Parser where
 
 import Control.Monad (guard, liftM2, (<$!>))
 import Control.Monad.Combinators (sepBy)
-import qualified Control.Monad.Combinators.Expr as MPExpr (
+import Control.Monad.Combinators.Expr qualified as MPExpr (
   Operator (..),
   makeExprParser,
  )
@@ -19,7 +17,7 @@ import Data.Foldable (toList)
 import Data.Functor (($>))
 import Data.Maybe (fromMaybe, mapMaybe, maybeToList)
 import Data.Text (Text, elem, isPrefixOf, pack)
-import qualified Data.Text as Text
+import Data.Text qualified as Text
 import Data.Void (Void)
 import Nixfmt.Lexer (lexeme, takeTrivia, whole, wholeInner)
 import Nixfmt.Parser.Float (floatParse)

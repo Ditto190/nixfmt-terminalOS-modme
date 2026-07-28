@@ -1,4 +1,3 @@
-{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE ViewPatterns #-}
 
 -- | Helpers for implementing tools that process UTF-8 encoded data.
@@ -24,10 +23,10 @@ where
 
 import Control.Exception (bracket)
 import Data.Text (Text)
-import qualified Data.Text.IO as T
+import Data.Text.IO qualified as T
 import GHC.IO.Encoding (mkTextEncoding, textEncodingName, utf8)
 import System.IO (stderr, stdin, stdout)
-import qualified System.IO as IO
+import System.IO qualified as IO
 
 type EncRestoreAction = IO.Handle -> IO ()
 

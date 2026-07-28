@@ -1,20 +1,13 @@
-{-# LANGUAGE BangPatterns #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE LambdaCase #-}
-{-# LANGUAGE NamedFieldPuns #-}
 {-# LANGUAGE OverloadedLists #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE RankNTypes #-}
-{-# LANGUAGE TupleSections #-}
-{-# LANGUAGE TypeApplications #-}
 
 module Nixfmt.Pretty where
 
 import Data.Char (isSpace)
 import Data.Maybe (fromJust, fromMaybe, isJust, isNothing)
-import qualified Data.Sequence as Seq
+import Data.Sequence qualified as Seq
 import Data.Text (Text)
-import qualified Data.Text as Text (null, span, takeWhile)
+import Data.Text qualified as Text (null, span, takeWhile)
 import Nixfmt.Predoc (
   Doc,
   GroupAnn (..),
