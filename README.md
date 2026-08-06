@@ -1,5 +1,3 @@
-![Build Status](https://github.com/NixOS/nixfmt/actions/workflows/main.yml/badge.svg?branch=master)
-
 # Nixfmt
 
 Nixfmt is the official formatter for Nix language code.
