@@ -362,7 +362,7 @@
     (func-builder {
       bar = "baz";
     })
-    arg1
-    arg2
+      arg1
+      arg2
   )
 ]
