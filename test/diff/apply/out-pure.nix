@@ -340,4 +340,6 @@
   ) { })
 
   (badge "https://github.com/maralorn/haskell-taskwarrior/actions/workflows/haskell.yml/badge.svg" "https://github.com/maralorn/haskell-taskwarrior/actions")
+  # Parenthesized function application should indent args past callee.
+  ((func-builder { bar = "baz"; }) arg1 arg2)
 ]
