@@ -476,7 +476,7 @@ prettyApp indentFunction pre hasPost f a =
       absorbApp (Application f' a') = group' Transparent (absorbApp f') <> line <> nest (group' Priority $ absorbInner a')
       -- First argument
       absorbApp expr
-        | indentFunction && null comment' = nest $ group' RegularG $ line' <> pretty expr
+        | indentFunction && null comment' = group' RegularG $ line' <> pretty expr
         | otherwise = pretty expr
 
       -- Render the inner arguments of a function call
